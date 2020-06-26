@@ -68,9 +68,8 @@ class Home extends React.Component {
 
     onScroll = (e) => {
         if ((window.innerHeight + window.scrollY) === document.getElementsByClassName("content")[0].offsetHeight && !this.state.resultsDone) {
-            debugger
             this.setState({
-                page: this.state.page == 1 ? 3 : this.state.page + 1,
+                page: this.state.page === 1 ? 3 : this.state.page + 1,
                 bottomLoading: true,
                 products: this.state.products.concat(this.state.predata),
             }, () => {
@@ -93,18 +92,17 @@ class Home extends React.Component {
                             (
                                 this.state.products.map((product, i) => {
                                     product.index = ++i;
-                                    debugger
                                     return (
                                         <>
                                             <Col className="font-icon-list" xl="3" lg="4" md="4" sm="6" xs="6" >
                                                 <EmojiBox face={product}></EmojiBox>
                                             </Col>
-                                            {product.index % 20 == 0 && (
+                                            {product.index % 20 === 0 && (
                                                 <Col className="font-icon-list" md="12" style={{ color: "white", textAlign: "left", paddingBottom: "30px" }}>
                                                     <p>Here you're sure to find a bargain on some of the finest ascii available to purchase. Be sure to peruse our selection of ascii faces in an exciting range of sizes and prices.</p>
 
                                                     <p>But first, a word from our sponsors:</p>
-                                                    <img className="ad" src={`http://localhost:3001/ads/?r=${Math.floor(product.index / 20)}`} width="300"></img>
+                                                    <img className="ad" alt="a word from our sponsors" src={`http://localhost:3001/ads/?r=${Math.floor(product.index / 20)}`} width="300"></img>
                                                 </Col>
                                             )}
                                         </>

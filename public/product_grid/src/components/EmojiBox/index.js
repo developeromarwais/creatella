@@ -2,23 +2,22 @@ import React from "react";
 import "./style.scss";
 
 import {
-    Card, CardImg, CardText, CardBody,
+    Card, CardText, CardBody,
     CardTitle, CardSubtitle, Button, CardHeader
 } from 'reactstrap';
 class EmojiBox extends React.Component {
 
     get_time_diff = (datetime) => {
-        var datetime = datetime;
-
-        var datetime = new Date(datetime).getTime();
+        datetime = new Date(datetime).getTime();
         var now = new Date().getTime();
+        var milisec_diff = 0;
         if (isNaN(datetime)) {
             return "";
         }
         if (datetime < now) {
-            var milisec_diff = now - datetime;
+            milisec_diff = now - datetime;
         } else {
-            var milisec_diff = datetime - now;
+            milisec_diff = datetime - now;
         }
 
         var days = Math.floor(milisec_diff / 1000 / 60 / (60 * 24));

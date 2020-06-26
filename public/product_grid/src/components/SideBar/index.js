@@ -1,15 +1,12 @@
 
 import React from "react";
 // reactstrap components
-import { Row, Col, FormGroup, Label, Input, Nav } from "reactstrap";
+import { FormGroup, Label, Input, Nav } from "reactstrap";
 
 import "./style.scss";
 
 
 class Sidebar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         const { bgColor, onSortChanged } = this.props;
         return (
