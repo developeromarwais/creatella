@@ -3,7 +3,7 @@ import "./style.scss";
 
 import {
     Card, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, CardHeader
+    CardTitle, CardSubtitle, CardHeader
 } from 'reactstrap';
 class EmojiBox extends React.Component {
 
@@ -46,7 +46,6 @@ class EmojiBox extends React.Component {
                         <CardSubtitle>{`Size : ${face.size}`}</CardSubtitle>
                         <CardSubtitle>{`Price : $${face.price / 100}`}</CardSubtitle>
                         <CardText>{`Post Date :  ${this.relativeTime(face.date)}`}</CardText>
-                        <Button>Button</Button>
                     </CardBody>
                 </Card>
             </div>
