@@ -1,0 +1,32 @@
+.card-body{
+    text-align: left;
+}
+.sidebar{
+    font-size: 18px;
+    background: linear-gradient(0deg,#3358f4,#1d8cf8)!important;
+    color: black;
+    padding: 10px;
+    overflow: hidden;
+    select{
+        background: #27293d !important;
+        color: white; 
+        border:1px solid black;
+        border-radius: 10px;
+        option{
+            color:white!important;
+        }
+    }
+    select:focus {
+        color: white;
+        option{
+             color: black;
+        }
+      }
+}
+
+
+.spinner-grow{
+    top: 50%;
+    left: 50%;    
+    position: absolute;
+}
